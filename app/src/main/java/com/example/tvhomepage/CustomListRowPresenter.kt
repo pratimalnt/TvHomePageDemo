@@ -25,8 +25,8 @@ class CustomListRowPresenter : ListRowPresenter() {
         //val numRows: Int = (item as CustomListRow).getNumRows()
         //rowView.getGridView()!!.setNumRows(numRows)
         val mItemBridgeAdapter = ItemBridgeAdapter()
-       // mItemBridgeAdapter.setAdapter(rowItem.getAdapter())
-        //rowView.getGridView()!!.adapter = mItemBridgeAdapter
+        mItemBridgeAdapter.setAdapter(rowItem.adapter)
+        rowView.getGridView()!!.adapter = mItemBridgeAdapter
 
         rowView.getGridView()!!.contentDescription = rowItem.getContentDescription()
         super.onBindRowViewHolder(holder, item)

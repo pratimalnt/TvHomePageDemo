@@ -92,7 +92,7 @@ class MainFragment : HackyBrowseSupportFragment() {
     private fun loadRows() {
         val list = MovieList.list
 
-        val rowsAdapter = ArrayObjectAdapter(ListRowPresenter())
+        val rowsAdapter = ArrayObjectAdapter(CustomListRowPresenter())
         val cardPresenter = CardPresenter()
 
         for (i in 0 until NUM_ROWS) {
@@ -109,17 +109,17 @@ class MainFragment : HackyBrowseSupportFragment() {
                 }
             })
             val header = IconHeaderItem(0,"GridItemPresenter ", R.drawable.movie)
-            rowsAdapter.add(ListRow(header, listRowAdapter))
+            rowsAdapter.add(CustomListRow(header, listRowAdapter))
         }
 
-            val gridHeader = HeaderItem(NUM_ROWS.toLong(), "PREFERENCES")
+            val gridHeader = IconHeaderItem(NUM_ROWS.toLong(), "PREFERENCES")
 
         val mGridPresenter = GridItemPresenter()
         val gridRowAdapter = ArrayObjectAdapter(mGridPresenter)
         gridRowAdapter.add(resources.getString(R.string.grid_view))
         gridRowAdapter.add(getString(R.string.error_fragment))
         gridRowAdapter.add(resources.getString(R.string.personal_settings))
-        rowsAdapter.add(ListRow(gridHeader, gridRowAdapter))
+        rowsAdapter.add(CustomListRow(gridHeader, gridRowAdapter))
 
         adapter = rowsAdapter
     }
