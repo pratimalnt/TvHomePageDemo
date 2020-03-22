@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
     
     <androidx.leanback.widget.VerticalGridView
+        android:id="@+id/main_grid_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

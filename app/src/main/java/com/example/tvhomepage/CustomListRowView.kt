@@ -19,7 +19,7 @@ class CustomListRowView(context: Context?, attrs: AttributeSet?, defStyleAttr: I
    }
 
     fun getGridView(): HorizontalGridView {
-        return gridview
+        return grid_view
 
     }
 
