@@ -19,7 +19,7 @@ class TestActivity : Activity() {
 
         val list = MovieList.list
         val newPresenterSelector = CustomPresentorSelector()
-        val customListRowPresenter = CustomListRowPresenter()
+       // val customListRowPresenter = CustomListRowPresenter()
         mRowsAdapter = ArrayObjectAdapter(newPresenterSelector)
         var i: Int
         for (i in 0 until NUM_ROWS){
