@@ -35,7 +35,7 @@ class TestActivity : Activity() {
         }
         val itemBridgeAdapter = ItemBridgeAdapter(mRowsAdapter)
         setContentView(R.layout.vertical_grid_view)
-        main_grid_view.adapter = itemBridgeAdapter
+        main_vertical_grid_view.adapter = itemBridgeAdapter
 
     }
 
